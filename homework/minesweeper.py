@@ -114,6 +114,7 @@ class Minesweeper:
                 for j in range(col - 1, col + 2):
                     if i >= 0 and i < rows and j >= 0 and j < cols and [i, j] not in self.shown:
                         self.count_bombs(i, j)
+                        
     def timer(self):
         time_passed = (time.time() - self.start_time)
         return time_passed
@@ -137,6 +138,7 @@ def main():
         print("3. 高级")
         print("4. 设置棋盘")
         print("5. 退出")
+        
         choice = input("输入选择: ")
             
         match choice:
